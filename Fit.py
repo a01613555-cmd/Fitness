@@ -48,7 +48,7 @@ LR.fit(X, y)
 
 b1 = LR.coef_
 b0 = LR.intercept_
-prediccion = b0 + b1[0]*df['age'] + b1[1]*df['height_cm'] + b1[2]*df['weight_kg'] + b1[3]*df['heart_rate']b1[4]*df['blood_pressure'] + b1[5]*df['sleep_hours'] + b1[6]*df['nutrition_quality'] + b1[7]*df['activity_index']+b1[8]*df['sleep_hours'] + b1[9]*df['smokes'] + b1[10]*df['gender']
+prediccion = b0 + b1[0]*df['age'] + b1[1]*df['height_cm'] + b1[2]*df['weight_kg'] + b1[3]*df['heart_rate']+b1[4]*df['blood_pressure'] + b1[5]*df['sleep_hours'] + b1[6]*df['nutrition_quality'] + b1[7]*df['activity_index']+b1[8]*df['sleep_hours'] + b1[9]*df['smokes'] + b1[10]*df['gender']
 
 st.subheader('Cálculo de fitness')
 st.write('Eres fit: ', prediccion)
