@@ -38,19 +38,20 @@ def user_input_features():
   return features
 
 df = user_input_features()
-datos =  pd.read_csv('fitnes.csv', encoding='latin-1')
-X = datos.drop(columns=['is_fit'])
-y = datos['is_fit']
 
-from sklearn.model_selection import train_test_split
-from sklearn.linear_model import LinearRegression
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.30, random_state=1613555)
-LR = LinearRegression()
-LR.fit(X_train,y_train)
+titanic =  pd.read_csv('Titanic2.csv', encoding='latin-1')
+X = titanic.drop(columns='is_fit')
+Y = titanic['is_fit']
 
-b1 = LR.coef_
-b0 = LR.intercept_
-prediccion = b0 + b1[0]*df['age'] + b1[1]*df['height_cm'] + b1[2]*df['weight_kg'] + b1[3]*df['heart_rate']+b1[4]*df['blood_pressure'] + b1[5]*df['sleep_hours'] + b1[6]*df['nutrition_quality'] + b1[7]*df['activity_index']+b1[8]*df['sleep_hours'] + b1[9]*df['smokes'] + b1[10]*df['gender']
+classifier = DecisionTreeClassifier(max_depth=4, criterion='gini', min_samples_leaf=25, max_features=5, random_state=1613555)
+classifier.fit(X, Y)
 
-st.subheader('Cálculo de fitness')
-st.write('Eres fit: ', prediccion)
+prediction = classifier.predict(df)
+
+st.subheader('Predicción')
+if prediction == 0:
+  st.write('No fit')
+elif prediction == 1:
+  st.write('Fit')
+else:
+  st.write('Sin predicción')
