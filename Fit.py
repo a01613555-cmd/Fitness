@@ -4,6 +4,7 @@ import pandas as pd
 from sklearn import datasets
 from sklearn.tree import DecisionTreeClassifier
 
+
 st.write(''' # Predicción de Fitness  ''')
 st.image("imagen.jpg", caption="Predicción de Fitness.")
 
@@ -21,7 +22,7 @@ def user_input_features():
   Actividad_fisica = st.number_input('activity_index:', min_value=0.0, max_value=100.0, value = 0.0, step = 1.0)
   Fuma = st.number_input('smokes:', min_value=0.0, max_value=1.0, value = 0.0, step = 1.0)
   Genero = st.number_input('gender:',  min_value=0.0, max_value=1.0, value = 0.0, step = 1.0)
-  
+
 
   user_input_data = {'age': Edad,
                      'height_cm': Altura,
