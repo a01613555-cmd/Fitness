@@ -39,7 +39,7 @@ def user_input_features():
 
 df = user_input_features()
 
-titanic =  pd.read_csv('Titanic2.csv', encoding='latin-1')
+titanic =  pd.read_csv('fitnes.csv', encoding='latin-1')
 X = titanic.drop(columns='is_fit')
 Y = titanic['is_fit']
 
