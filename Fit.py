@@ -10,14 +10,14 @@ st.header('Datos')
 def user_input_features():
   # Entrada
   Edad = st.number_input('age:', min_value=0.0, max_value=100.0, value = 0.0, step = 1.0)
-  Altura = st.number_input('height_cm:',  min_value=0.0, max_value=100.0, value = 0.0, step = 1.0)
-  Peso = st.number_input('weight_kg:', min_value=0.0, max_value=100.0, value = 0.0, step = 1.0)
-  Ritmo_cardiaco = st.number_input('heart_rate:', min_value=0.0, max_value=100.0, value = 0.0, step = 1.0)
-  Presion_en_la_sangre = st.number_input('blood_pressure:', min_value=0.0, max_value=100.0, value = 0.0, step = 1.0)
+  Altura = st.number_input('height_cm:',  min_value=0.0, max_value=1000.0, value = 0.0, step = 1.0)
+  Peso = st.number_input('weight_kg:', min_value=0.0, max_value=1000.0, value = 0.0, step = 1.0)
+  Ritmo_cardiaco = st.number_input('heart_rate:', min_value=0.0, max_value=1000.0, value = 0.0, step = 1.0)
+  Presion_en_la_sangre = st.number_input('blood_pressure:', min_value=0.0, max_value=1000.0, value = 0.0, step = 1.0)
   Sueño = st.number_input('sleep_hours:',  min_value=0.0, max_value=100.0, value = 0.0, step = 1.0)
   Calidad_de_nutrición = st.number_input('nutrition_quality:', min_value=0.0, max_value=100.0, value = 0.0, step = 1.0)
-  Actividad_fisica = st.number_input('activity_index:', min_value=0.0, max_value=1.0, value = 0.0, step = 1.0)
-  Fuma = st.number_input('smokes:', min_value=0.0, max_value=100.0, value = 0.0, step = 1.0)
+  Actividad_fisica = st.number_input('activity_index:', min_value=0.0, max_value=100.0, value = 0.0, step = 1.0)
+  Fuma = st.number_input('smokes:', min_value=0.0, max_value=1.0, value = 0.0, step = 1.0)
   Genero = st.number_input('gender:',  min_value=0.0, max_value=1.0, value = 0.0, step = 1.0)
   
 
