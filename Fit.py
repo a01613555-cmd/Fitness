@@ -42,6 +42,7 @@ datos =  pd.read_csv('fitnes.csv', encoding='latin-1')
 X = datos.drop(columns=['is_fit'])
 y = datos['is_fit']
 
+from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 LR = LinearRegression()
 LR.fit(X, y)
