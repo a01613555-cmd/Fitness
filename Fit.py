@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import seaborn as sns
 from sklearn import tree
 
 st.write(''' # Predicción de Fitness  ''')
