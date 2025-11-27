@@ -1,6 +1,8 @@
-import pandas as pd
 import numpy as np
-from sklearn import tree
+import streamlit as st
+import pandas as pd
+from sklearn import datasets
+from sklearn.tree import DecisionTreeClassifier
 
 st.write(''' # Predicción de Fitness  ''')
 st.image("imagen.jpg", caption="Predicción de Fitness.")
